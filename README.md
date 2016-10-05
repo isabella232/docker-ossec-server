@@ -15,7 +15,7 @@ To get an up and running ossec server that supports auto-enrollment and sends HI
 
 ```
  docker run --name ossec-server -d -p 1514:1514/udp -p 1515:1515\
-  -e SYSLOG_FORWADING_ENABLED=true -e SYSLOG_FORWARDING_SERVER_IP=X.X.X.X\
+  -e SYSLOG_FORWARDING_ENABLED=true -e SYSLOG_FORWARDING_SERVER_IP=X.X.X.X\
   -v /somepath/ossec_mnt:/var/ossec/data xetusoss/ossec-server
 ```
 
@@ -33,7 +33,7 @@ docker exec -ti ossec-server /var/ossec/bin/list_agents -a
 * __SMTP_RELAY_HOST__: The relay host for SMTP messages, required for SMTP notifications. This host must support non-authenticated SMTP ([see this thread](https://ossec.uservoice.com/forums/18254-general/suggestions/803659-allow-full-confirguration-of-smtp-service-in-ossec)). No default.
 * __ALERTS_FROM_EMAIL__: The email address the alerts should come from. Defaults to `ossec@$HOSTNAME`.
 * __ALERTS_TO_EMAIL__: The destination email address for SMTP notifications, required for SMTP notifications. No default.
-* __SYSLOG_FORWADING_ENABLED__: Specify whether syslog forwarding is enabled or not. Defaults to `false`.
+* __SYSLOG_FORWARDING_ENABLED__: Specify whether syslog forwarding is enabled or not. Defaults to `false`.
 * __SYSLOG_FORWARDING_SERVER_IP__: The IP for the syslog server to send messagse to, required for syslog fowarding. No default.
 * __SYSLOG_FORWARDING_SERVER_PORT__: The destination port for syslog messages. Default is `514`.
 * __SYSLOG_FORWARDING_FORMAT__: The syslog message format to use. Default is `default`.

@@ -91,8 +91,8 @@ then
   #
   # Support SYSLOG forwarding, if configured
   #
-  SYSLOG_FORWADING_ENABLED=${SYSLOG_FORWADING_ENABLED:-false}
-  if [ $SYSLOG_FORWADING_ENABLED == true ]
+  SYSLOG_FORWARDING_ENABLED=${SYSLOG_FORWARDING_ENABLED:-false}
+  if [ $SYSLOG_FORWARDING_ENABLED == true ]
   then
     if [ -z "$SYSLOG_FORWARDING_SERVER_IP" ]
     then
